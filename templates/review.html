@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="너를 위한 한마디"/>
+    <meta property="og:description" content="한마디 남기기"/>
+    <meta property="og:image"
+          content="https://images.unsplash.com/photo-1421986527537-888d998adb74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <title>카타르 월드컵 응원!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.2/dist/united/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/review.css" rel="stylesheet"/>
+    <script src="../static/js/review.js"></script>
+
+</head>
+
+<body>
+<div class="mytitle">
+    <h1>Which team do you root for?</h1>
+    <div style="position:fixed; left:50px; top:50px; cursor:pointer; font-size:14px; font-weight:600;">
+        <span class="mainpage_back" onclick="history.back()">뒤로가기</span>
+    </div>
+    <h4 id="clock" style="color:black;">clock</h4>
+    <script>
+        var Target = document.getElementById("clock");
+
+        function clock() {
+            var time = new Date();
+
+            var month = time.getMonth();
+            var date = time.getDate();
+            var day = time.getDay();
+            var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+
+            Target.innerText =
+                `${month + 1}월 ${date}일 ${week[day]}요일 ` +
+                `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+        }
+
+        clock();
+        setInterval(clock, 1000); // 1초마다 실행
+    </script>
+</div>
+<div id="wrap">
+</div>
+<div class="mypost">
+    <div id="options" class="form-group">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label mt-4" for="inputDefault">Title</label>
+        <input id="title" type="text" class="form-control" placeholder="Title" id="inputDefault">
+    </div>
+    <div class="form-group">
+        <label for="exampleTextarea" class="form-label mt-4">leave your comment</label>
+        <textarea id="comment" class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+    <div class="mybtn">
+        <button onclick="save_comment()" type="button" class="btn btn-dark">응원 댓글 남기기</button>
+    </div>
+</div>
+<div id="comment_box">
+</div>
+</body>
+</html>
