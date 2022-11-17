@@ -19,14 +19,18 @@
 
 <img src="https://im4.ezgif.com/tmp/ezgif-4-c1395a87c5.gif">
 
-[Youtube]<https://youtu.be/8l2u_-BRdac>
+#### [Youtube]<https://youtu.be/8l2u_-BRdac>
+
+### 4. 프로젝트 주소
+
+#### [Qatar-sis] <http://leejincha.shop/>
 
 
-### [4. 와이어 프레임 & API 설계](https://www.notion.so/2-1-Mini-Project-eb4f6367a5e74ccf891f2bf336e21112)
+### [5. 와이어 프레임 & API 설계](https://www.notion.so/2-1-Mini-Project-eb4f6367a5e74ccf891f2bf336e21112)
 (https://www.notion.so/2-1-Mini-Project-eb4f6367a5e74ccf891f2bf336e21112)
 
 
-### 5. 사용한 기술
+### 6. 사용한 기술
 
 ![](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white) CSS
 <br>
@@ -43,7 +47,7 @@
 ![](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white) Mongo DB   
     
 
- ### 6. 트러블 슈팅
+ ### 7. 트러블 슈팅
  
 > #### 1. 크롤링 오류
        
