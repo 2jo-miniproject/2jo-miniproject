@@ -1,5 +1,9 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .wrap {
-    width: 300px;
+    width: 350px;
     margin: 150px auto 0 auto;
 
     display: flex;
@@ -9,11 +13,11 @@
 }
 
 .image {
-    width: 240px;
+    width: 350px;
     height: 280px;
     margin: auto;
 
-    background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/2022_FIFA_World_Cup.svg/1200px-2022_FIFA_World_Cup.svg.png");
+    background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FvCNIz%2FbtrRiWeNYdF%2FPw5cWmboFUZOwUoSTk9QU0%2Fimg.png");
     background-position: center;
     background-size: cover;
 

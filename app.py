@@ -10,7 +10,8 @@ import hashlib
 app = Flask(__name__)
 
 ca = certifi.where()
-client = MongoClient('개인의 몽고디비 주소를 넣어주세요',tlsCAFile=ca)
+client = MongoClient('mongodb+srv://leejincha:sparta@cluster0.gahhmvb.mongodb.net/?retryWrites=true&w=majority',
+                     tlsCAFile=ca)
 db = client.dbsparta
 
 SECRET_KEY = 'SPARTA'
@@ -24,9 +25,9 @@ def home():
         user_info = db.user.find_one({"id": payload['id']})
         return render_template('index.html', nickname=user_info["nick"])
     except jwt.ExpiredSignatureError:
-        return redirect(url_for("login", msg="로그인 시간이 만료되었습니다."))
+        return redirect(url_for("login"))
     except jwt.exceptions.DecodeError:
-        return redirect(url_for("login", msg="로그인 정보가 존재하지 않습니다."))
+        return redirect(url_for("login"))
 
 
 @app.route('/login')
@@ -80,9 +81,9 @@ def api_valid():
         userinfo = db.user.find_one({'id': payload['id']}, {'_id': 0})
         return jsonify({'result': 'success', 'nickname': userinfo['nick']})
     except jwt.ExpiredSignatureError:
-        return jsonify({'result': 'fail', 'msg': '로그인 시간이 만료되었습니다.'})
+        return jsonify({'result': 'fail'})
     except jwt.exceptions.DecodeError:
-        return jsonify({'result': 'fail', 'msg': '로그인 정보가 존재하지 않습니다.'})
+        return jsonify({'result': 'fail'})
 
 
 @app.route('/save', methods=['POST'])
@@ -136,13 +137,15 @@ def save_comment():
     comment_receive = request.form['comment_give']
     option1_receive = request.form['option1_give']
     option2_receive = request.form['option2_give']
+    order_receive = request.form['order_give']
 
     doc = {
         'team': team_receive,
         'title': title_receive,
         'comment': comment_receive,
         'option1': option1_receive,
-        'option2': option2_receive
+        'option2': option2_receive,
+        'order': order_receive,
     }
 
     db.comment.insert_one(doc)

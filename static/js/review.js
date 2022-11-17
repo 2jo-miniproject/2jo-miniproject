@@ -26,10 +26,10 @@ function listing() {
                                 <p id="group" style="font-size: 20px">&lt;${gruop}&gt;</p>
                                 <div class="wrap2">
                                     <div class="team1">
-                                        <p id="leftcountry">${leftcountry} </p>
                                         <img src="${leftflag}" width="40px" height="30px" >
+                                        <p id="leftcountry"> ${leftcountry}</p>
                                     </div>
-                                    <p id="time">${time}</p>
+                                        <p id="time">${time}</p>
                                     <div class="team2">
                                         <p id="rightcountry">${rightcountry} </p>
                                         <img src="${rightflag}" width="40px" height="30px" >
@@ -74,6 +74,8 @@ $(document).ready(function () {
 });
 
 function show_comment() {
+    let order = window.location.href.slice(-1)
+
     $.ajax({
         type: "GET",
         url: '/show/comment',
@@ -81,18 +83,20 @@ function show_comment() {
         success: function (response) {
             let rows = response['comments']
             for (let i = 0; i < rows.length; i++) {
-                let comment = rows[i]['comment']
-                let team = rows[i]['team']
-                let title = rows[i]['title']
+                if (order == rows[i]['order']) {
+                    let comment = rows[i]['comment']
+                    let team = rows[i]['team']
+                    let title = rows[i]['title']
 
-                let temp_html = `<div class="card border-dark mb-3" style="max-width: 31rem;">
+                    let temp_html = `<div class="card border-dark mb-3" style="max-width: 31rem;">
                                             <div class="card-header">${team}</div>
                                             <div class="card-body">
                                                 <h4 class="card-title">${title}</h4>
                                                 <p class="card-text">${comment}</p>
                                             </div>
                                         </div>`
-                $('#comment_box').append(temp_html)
+                    $('#comment_box').append(temp_html)
+                }
             }
         }
     });
@@ -104,6 +108,7 @@ function save_comment() {
     let comment = $('#comment').val()
     let option1 = $('#option1').val()
     let option2 = $('#option2').val()
+    let order = window.location.href.slice(-1)
 
     $.ajax({
         type: "POST",
@@ -114,6 +119,7 @@ function save_comment() {
             team_give: team,
             option1_give: option1,
             option2_give: option2,
+            order_give: order,
         },
         success: function (response) {
             alert(response['msg'])
