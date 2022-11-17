@@ -96,7 +96,7 @@ def save_matches():
     soup = BeautifulSoup(data.text, "html.parser")
 
     matches = soup.find_all("div", {"class": "group"})
-    result = []
+  
 
     for match in matches:
         group = match.find("h3", {"class": "group-title"})
