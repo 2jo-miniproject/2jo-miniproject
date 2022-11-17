@@ -1,0 +1,24 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+    width: 350px;
+    margin: 150px auto 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 350px;
+    height: 280px;
+    margin: auto;
+
+    background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FvCNIz%2FbtrRiWeNYdF%2FPw5cWmboFUZOwUoSTk9QU0%2Fimg.png");
+    background-position: center;
+    background-size: cover;
+
+}
