@@ -10,8 +10,7 @@ import hashlib
 app = Flask(__name__)
 
 ca = certifi.where()
-client = MongoClient('몽고디비주소',
-                     tlsCAFile=ca)
+client = MongoClient('몽고디비주소')
 db = client.dbsparta
 
 SECRET_KEY = 'SPARTA'
