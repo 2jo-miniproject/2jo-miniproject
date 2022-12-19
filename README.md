@@ -1,5 +1,7 @@
 # Qatar-sis ⚽
-![라이브(La'eeb)](https://w.namu.la/s/49453bddebf913628d757ba302ac0e601d3377afb6f07b13ea001761aec4c4fbffff35c9da2016e975419c0ed1c03d011545c82b35144a99330aeea652656dfa0e5bd6b17f59268f65054f31ae40116dce4981a60755e5fe66b80c0c36feb522ae18d7383658819cf9c8a15171c7e237)
+
+<img src="./Qtar-sis.png" height="200px" width="300px"></img>
+
 
 ### 1. 프로젝트 설정 이유
   아시아에서 두 번째로 열리는 월드컵, 역사상 최초 겨울에 개최되는 카타르월드컵을 기념하고자 32개 참가국을  
