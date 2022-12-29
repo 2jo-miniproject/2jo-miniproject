@@ -19,16 +19,14 @@
 
 ### 3. 프로젝트 시연 영상
 
-<img src="https://im4.ezgif.com/tmp/ezgif-4-c1395a87c5.gif">
-
-#### [Youtube]<https://youtu.be/8l2u_-BRdac>
+[Youtube]<https://youtu.be/8l2u_-BRdac>
 
 ### 4. 프로젝트 주소
 
 #### [Qatar-sis] <http://leejincha.shop/>
 
 
-### [5. 와이어 프레임 & API 설계](https://www.notion.so/2-1-Mini-Project-eb4f6367a5e74ccf891f2bf336e21112)
+### 5. 와이어 프레임 & API 설계
 (https://www.notion.so/2-1-Mini-Project-eb4f6367a5e74ccf891f2bf336e21112)
 
 
